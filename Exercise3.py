@@ -21,13 +21,18 @@ story = {
     'middle': "They were having fun with python.",
     'end':"Then they all got placed to go to Ireland."
 }
-input1 = input('do you want to hear a story y/n > ')
+input_keys = {
+    'key1': 'do you want to hear a story y/n > ',
+    'key2': 'do you want to continue y/n > ',
+    'key3': 'do you want to hear the end y/n > '
+}
+input1 = input(input_keys['key1'])
 if input1 == 'y':
     print(story['beginning'])
-    input2 = input('do you want to continue y/n > ')
+    input2 = input(story['key2'])
     if input2 == 'y':
         print(story['middle'])
-        input3 = input('do you want to continue y/n > ')
+        input3 = input(story['key3'])
         if input3 == 'y':
             print(story['end'])
         else:
